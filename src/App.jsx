@@ -1,12 +1,20 @@
+import React from "react";
 import "./App.css";
+import travelData from "./assets/travel_data.json";
+import Header from "./containers/Header";
+import Body from "./containers/Body";
+
+const { data } = travelData;
+// import "./components/TripItems";
 
 function App() {
-  return (
-    <>
-      <h1>Marta</h1>
+  console.log(travelData);
 
-      <p>Ciao </p>
-    </>
+  return (
+    <React.Fragment>
+      <Header data={data} />
+      <Body data={data} />
+    </React.Fragment>
   );
 }
 

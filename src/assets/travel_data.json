@@ -1,0 +1,35 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "category": "trip",
+      "type": "Flight",
+      "date": "2023-08-10",
+      "where": "Roma Fiumicino",
+      "destination": "Vienna Airport",
+      "start_time": "9:30",
+      "end_time": "11:10",
+      "notes": ""
+    },
+    {
+      "id": 2,
+      "category": "trip",
+      "type": "Coach",
+      "date": "2023-08-11",
+      "where": "Vienna Airport",
+      "destination": "Bratislava",
+      "start_time": "13:40",
+      "end_time": "14:25",
+      "notes": "Travelling with FlixBus"
+    },
+    {
+      "id": 3,
+      "category": "stay",
+      "type": "Apartment",
+      "date": "2023-08-12",
+      "where": "Bratislava",
+      "start_time": "13:40",
+      "notes": "VIP Apartments - Michalská 19, Bratislava, 811 01"
+    }
+  ]
+}
