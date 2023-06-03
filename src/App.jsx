@@ -5,7 +5,6 @@ import Header from "./containers/Header";
 import Body from "./containers/Body";
 
 const { data } = travelData;
-// import "./components/TripItems";
 
 function App() {
   console.log(travelData);
