@@ -30,6 +30,15 @@
       "where": "Bratislava",
       "start_time": "13:40",
       "notes": "VIP Apartments - Michalská 19, Bratislava, 811 01"
+    },
+    {
+      "id": 4,
+      "category": "trip",
+      "type": "Apartment",
+      "date": "2023-08-12",
+      "where": "Bratislava",
+      "start_time": "13:40",
+      "notes": "VIP Apartments - Michalská 19, Bratislava, 811 01"
     }
   ]
 }

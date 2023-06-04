@@ -1,0 +1,8 @@
+.dates {
+  box-sizing: border-box;
+  display: flex;
+  padding: 0px 30px;
+  padding-bottom: 30px;
+  /* justify-content: space-evenly; */
+  gap: 100px;
+}
