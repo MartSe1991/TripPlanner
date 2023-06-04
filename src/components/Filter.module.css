@@ -10,7 +10,6 @@ button:active {
   cursor: pointer;
   background: #ac0e77;
   color: white;
-  /* border-color: #de2ba3; */
 }
 
 button {

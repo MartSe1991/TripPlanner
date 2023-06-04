@@ -10,10 +10,10 @@ function App() {
   console.log(travelData);
 
   return (
-    <section className={classes.main}>
+    <main className={classes.main}>
       <Header data={data} />
       <Body data={data} />
-    </section>
+    </main>
   );
 }
 
