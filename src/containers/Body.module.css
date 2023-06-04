@@ -1,0 +1,5 @@
+.dates {
+  display: flex;
+  padding: 0px 30px 30px;
+  justify-content: space-between;
+}

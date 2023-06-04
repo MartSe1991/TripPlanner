@@ -1,13 +1,15 @@
 import React from "react";
+import classes from "./Filter.module.css";
 
 const Filter = () => {
   return (
-    <div>
-      <button>icons</button>
-      <button>icons</button>
-      <button>icons</button>
-      <button>icons</button>
-      <button>icons</button>
+    <div className={classes.icons}>
+      Filter:
+      <button>icon</button>
+      <button>icon</button>
+      <button>icon</button>
+      <button>icon</button>
+      <button>icon</button>
     </div>
   );
 };
