@@ -7,16 +7,6 @@ import Event from "./icons/Event";
 import FilterButton from "./FilterButton";
 import classes from "./FilterButton.module.css";
 
-//TODO creare tutte le icone dei filtri
-//TODO convertire i singoli buttoni dei filtri in component in modo che si possano utilizzare nel seguente modo:
-{
-  /* 
-<FilterButton type="flight">
-  <Flight />
-</FilterButton>; 
-*/
-}
-
 const Filter = ({ activeFilter, filterHandler }) => {
   // activeFilter={activeFilter} filterHandler={setActiveFilter}
 
@@ -60,8 +50,6 @@ const Filter = ({ activeFilter, filterHandler }) => {
       content: <Event />,
     },
   ];
-
-  // key={`Filter-${key}`}
 
   return (
     <div className={classes.icons}>

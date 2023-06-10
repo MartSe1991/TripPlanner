@@ -11,7 +11,6 @@ function App() {
 
   console.log(travelData);
 
-  // Il component ritorna un Header e un Body
   return (
     <main className={classes.main}>
       {/* Esempio */}
