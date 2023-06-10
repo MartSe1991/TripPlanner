@@ -3,7 +3,8 @@ import Filter from "../components/Filter";
 import dateToString from "../utils/dateToString";
 import classes from "./Header.module.css";
 
-const Header = ({ data }) => {
+const Header = ({ data, activeFilter, setActiveFilter }) => {
+  // data={data}   activeFilter={activeFilter}   setActiveFilter={setActiveFilter}
   const outboundDate = new Date(data[0].date);
   const returnDate = new Date(data[2].date);
 
@@ -12,9 +13,10 @@ const Header = ({ data }) => {
       <h2>Trip To:</h2>
       <h1>SLOVAKIA!</h1>
       <p>
+        {/* const dateToString = (date) => { return `${day} ${month}`} */}
         {`From ${dateToString(outboundDate)} to ${dateToString(returnDate)}`}
       </p>
-      <Filter />
+      <Filter activeFilter={activeFilter} filterHandler={setActiveFilter} />
     </header>
   );
 };

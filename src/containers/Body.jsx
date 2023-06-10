@@ -5,12 +5,12 @@ import dateToString from "../utils/dateToString";
 const Body = ({ data }) => {
   // data ha inizialmente questo formato:
 
-  // data: {
+  // data: [
   //   {id: 1, category: 'trip', type: 'Flight', date: '2023-08-10', where: 'Roma Fiumicino', …}
   //   {id: 2, category: 'trip', type: 'Coach', date: '2023-08-11', where: 'Vienna Airport', …}
   //   {id: 3, category: 'stay', type: 'Apartment', date: '2023-08-12', where: 'Bratislava', …}
   //   {id: 4, category: 'trip', type: 'Apartment', date: '2023-08-12', where: 'Bratislava', …}
-  // }
+  // ]
 
   const dateGroups = {};
 
@@ -19,7 +19,9 @@ const Body = ({ data }) => {
   // corrente. Per ognuno, creiamo un array vuoto.
   data.forEach((elem) => {
     if (!dateGroups[elem.date]) {
-      dateGroups[elem.date] = [];
+      // se non esiste una key all interno di dateGroups che sia uguale alla data dell-elem corrente
+      dateGroups[elem.date] = []; // allora crea una chiave all-interno di dateGroups utilizzando il valore corrente
+      // (dateGroups[elem.date] equivale a scrivere dateGroups.qualcosa )
     }
     // pushiamo l'elemento corrente all'interno del dateGroup che ha come
     // chiave la sua date
