@@ -13,7 +13,6 @@ function App() {
 
   return (
     <main className={classes.main}>
-      {/* Esempio */}
       <Header
         data={data}
         activeFilter={activeFilter}
