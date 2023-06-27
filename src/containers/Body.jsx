@@ -1,6 +1,7 @@
 import React from "react";
 import classes from "./Body.module.css";
 import dateToString from "../utils/dateToString";
+import Card from "../components/Card";
 
 const Body = ({ data }) => {
   // data ha inizialmente questo formato:
@@ -80,7 +81,22 @@ const Body = ({ data }) => {
         return (
           // la key va messa all'elem piu esterno
           <section key={`group-${key}`}>
-            <div>{dateToString(elemDate)}</div>
+            <div className={classes.single_date}>{dateToString(elemDate)}</div>
+            {eventData.map((elem) => {
+              return (
+                <Card
+                  key={elem.id}
+                  category={elem.category}
+                  type={elem.type}
+                  where={elem.where}
+                  date={elem.date}
+                  start_time={elem.start_time}
+                  end_time={elem.end_time}
+                  notes={elem.notes}
+                  destination={elem.destination}
+                />
+              );
+            })}
           </section>
         );
       })}

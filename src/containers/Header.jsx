@@ -6,7 +6,7 @@ import classes from "./Header.module.css";
 const Header = ({ data, activeFilter, setActiveFilter }) => {
   // data={data}   activeFilter={activeFilter}   setActiveFilter={setActiveFilter}
   const outboundDate = new Date(data[0].date);
-  const returnDate = new Date(data[2].date);
+  const returnDate = new Date(data[data.length - 1].date);
 
   return (
     <header className={classes.header}>

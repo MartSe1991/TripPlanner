@@ -3,3 +3,10 @@
   padding: 0px 30px 30px;
   justify-content: space-between;
 }
+
+.single_date {
+  font-weight: bold;
+  padding: 20px;
+  color: blueviolet;
+  font-size: 20px;
+}

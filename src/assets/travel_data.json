@@ -7,7 +7,7 @@
       "date": "2023-08-10",
       "where": "Roma Fiumicino",
       "destination": "Vienna Airport",
-      "start_time": "9:30",
+      "start_time": "9:25",
       "end_time": "11:10",
       "notes": ""
     },
@@ -15,7 +15,7 @@
       "id": 2,
       "category": "trip",
       "type": "Coach",
-      "date": "2023-08-11",
+      "date": "2023-08-10",
       "where": "Vienna Airport",
       "destination": "Bratislava",
       "start_time": "13:40",
@@ -26,7 +26,7 @@
       "id": 3,
       "category": "stay",
       "type": "Apartment",
-      "date": "2023-08-12",
+      "date": "2023-08-10",
       "where": "Bratislava",
       "start_time": "13:40",
       "notes": "VIP Apartments - Michalská 19, Bratislava, 811 01"
@@ -34,11 +34,63 @@
     {
       "id": 4,
       "category": "trip",
+      "type": "Train",
+      "date": "2023-08-11",
+      "where": "Bratislava",
+      "destination": "Zilina",
+      "start_time": "12:22",
+      "end_time": "13:59",
+      "notes": ""
+    },
+
+    {
+      "id": 5,
+      "category": "stay",
+      "type": "Apartment",
+      "date": "2023-08-11",
+      "where": "Bratislava",
+      "start_time": "13:40",
+      "notes": "Chateau Gbel''any "
+    },
+    {
+      "id": 6,
+      "category": "stay",
       "type": "Apartment",
       "date": "2023-08-12",
       "where": "Bratislava",
-      "start_time": "13:40",
-      "notes": "VIP Apartments - Michalská 19, Bratislava, 811 01"
+      "start_time": "N/A",
+      "notes": "Chateau Gbel''any "
+    },
+    {
+      "id": 7,
+      "category": "stay",
+      "type": "Apartment",
+      "date": "2023-08-13",
+      "where": "Bratislava",
+      "start_time": "N/A",
+      "notes": "Chateau Gbel''any "
+    },
+    {
+      "id": 8,
+      "category": "trip",
+      "type": "Train",
+      "date": "2023-08-14",
+      "where": "Zilina",
+      "destination": "Bratislava Main Station",
+      "start_time": "12:30",
+      "end_time": "14:33",
+      "notes": ""
+    },
+    {
+      "id": 9,
+      "category": "trip",
+      "type": "Flight",
+      "date": "2023-08-14",
+      "where": "Bratislava Airport",
+      "destination": "Roma Ciampino",
+      "start_time": "17:20",
+      "end_time": "19:00",
+      "notes": ""
     }
   ]
 }
