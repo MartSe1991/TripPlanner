@@ -43,33 +43,27 @@ const Card = (props) => {
         </div>
       </div>
       <div>
-        <div>
-          {props.category === "trip"
-            ? `Departs at ${props.start_time}`
-            : `Check in at ${props.start_time}`}
-        </div>
-        <div>
-          {props.category === "trip" && (
-            <div>{`Arrives at ${props.end_time}`}</div>
-          )}
-        </div>
+        {props.start_time && (
+          <div>
+            {props.category === "trip" && `Departs at ${props.start_time}`}
+            {props.category === "stay" && `Check in at ${props.start_time}`}
+          </div>
+        )}
+        {props.end_time && (
+          <div>
+            {props.category === "stay" && `Check-out at ${props.end_time}`}
+            {props.category === "trip" && (
+              <div>{`Arrives at ${props.end_time}`}</div>
+            )}
+          </div>
+        )}
+        {props.category === "stay" && !props.start_time && !props.end_time && (
+          <div>{`Stay at ${props.notes}`}</div>
+        )}
         {props.notes && props.notes !== "" && (
           <div className={classes.top_border}>{props.notes}</div>
         )}
       </div>
-
-      {/* {props.category === "stay" && (
-            <>
-              <div className={classes.title}>
-                <icon>{props.type === "Apartment" && <Stay />}</icon>
-                <div>
-                  <div>{props.where}</div>
-                  <div>{`Check in: ${props.start_time}`}</div>
-                </div>
-              </div>
-              <div>{props.notes}</div>
-            </>
-          )} */}
     </Container>
   );
 };

@@ -33,6 +33,15 @@
     },
     {
       "id": 4,
+      "category": "stay",
+      "type": "Apartment",
+      "date": "2023-08-11",
+      "where": "Bratislava",
+      "end_time": "12:00",
+      "notes": "VIP Apartments - Michalská 19, Bratislava, 811 01"
+    },
+    {
+      "id": 5,
       "category": "trip",
       "type": "Train",
       "date": "2023-08-11",
@@ -44,7 +53,7 @@
     },
 
     {
-      "id": 5,
+      "id": 6,
       "category": "stay",
       "type": "Apartment",
       "date": "2023-08-11",
@@ -53,25 +62,32 @@
       "notes": "Chateau Gbel''any "
     },
     {
-      "id": 6,
+      "id": 7,
       "category": "stay",
       "type": "Apartment",
       "date": "2023-08-12",
       "where": "Bratislava",
-      "start_time": "N/A",
-      "notes": "Chateau Gbel''any "
-    },
-    {
-      "id": 7,
-      "category": "stay",
-      "type": "Apartment",
-      "date": "2023-08-13",
-      "where": "Bratislava",
-      "start_time": "N/A",
       "notes": "Chateau Gbel''any "
     },
     {
       "id": 8,
+      "category": "stay",
+      "type": "Apartment",
+      "date": "2023-08-13",
+      "where": "Bratislava",
+      "notes": "Chateau Gbel''any "
+    },
+    {
+      "id": 9,
+      "category": "stay",
+      "type": "Apartment",
+      "date": "2023-08-14",
+      "where": "Bratislava",
+      "end_time": "12:00",
+      "notes": "Chateau Gbel''any "
+    },
+    {
+      "id": 10,
       "category": "trip",
       "type": "Train",
       "date": "2023-08-14",
@@ -82,7 +98,7 @@
       "notes": ""
     },
     {
-      "id": 9,
+      "id": 11,
       "category": "trip",
       "type": "Flight",
       "date": "2023-08-14",
