@@ -18,7 +18,7 @@ function App() {
         activeFilter={activeFilter}
         setActiveFilter={setActiveFilter}
       />
-      <Body data={data} />
+      <Body data={data} activeFilter={activeFilter} />
     </main>
   );
 }

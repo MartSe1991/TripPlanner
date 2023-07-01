@@ -30,23 +30,23 @@ const Filter = ({ activeFilter, filterHandler }) => {
 
   const filterElements = [
     {
-      type: "flight",
+      type: "Flight",
       content: <Flight />,
     },
     {
-      type: "train",
+      type: "Train",
       content: <Train />,
     },
     {
-      type: "coach",
+      type: "Coach",
       content: <Coach />,
     },
     {
-      type: "stay",
+      type: "Stay",
       content: <Stay />,
     },
     {
-      type: "event",
+      type: "Event",
       content: <Event />,
     },
   ];
