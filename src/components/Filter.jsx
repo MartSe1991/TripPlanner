@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import Flight from "./icons/Flight";
 import Train from "./icons/Train";
 import Coach from "./icons/Coach";
@@ -6,8 +6,10 @@ import Stay from "./icons/Stay";
 import Event from "./icons/Event";
 import FilterButton from "./FilterButton";
 import classes from "./FilterButton.module.css";
+import FilterContext from "../context/filter_status";
 
-const Filter = ({ activeFilter, filterHandler }) => {
+const Filter = (props) => {
+  const ctx = useContext(FilterContext);
   // activeFilter={activeFilter} filterHandler={setActiveFilter}
 
   // chiamiamo setFilter ogni volta che un filtro viene scelto.
@@ -23,7 +25,7 @@ const Filter = ({ activeFilter, filterHandler }) => {
   // IN QUELL'ESATTO MOMENTO non sia giá uguale al valore del filtro che voglio settare.
   // Se lo é, il filtro attivo viene settato come null, altrimenti assume il valore che voglio settare.
   const setFilter = (type) => {
-    filterHandler(activeFilter === type ? null : type); // per disattivare il filtro
+    props.filterHandler(ctx.activeFilter === type ? null : type); // per disattivare il filtro
   };
 
   //mappa filterelements ad ogni iterazione renderizza struttura qui sotto - utilizzando type e content al posto dei valori specifici
@@ -42,7 +44,7 @@ const Filter = ({ activeFilter, filterHandler }) => {
       content: <Coach />,
     },
     {
-      type: "Stay",
+      type: "Apartment",
       content: <Stay />,
     },
     {
@@ -58,7 +60,7 @@ const Filter = ({ activeFilter, filterHandler }) => {
         return (
           <FilterButton
             key={`Filter-${key}`}
-            isActive={activeFilter === elem.type}
+            isActive={ctx.activeFilter === elem.type}
             clickHandler={() => {
               setFilter(elem.type);
             }}

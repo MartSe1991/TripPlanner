@@ -16,7 +16,7 @@ const Header = ({ data, activeFilter, setActiveFilter }) => {
         {/* const dateToString = (date) => { return `${day} ${month}`} */}
         {`From ${dateToString(outboundDate)} to ${dateToString(returnDate)}`}
       </p>
-      <Filter activeFilter={activeFilter} filterHandler={setActiveFilter} />
+      <Filter filterHandler={setActiveFilter} />
     </header>
   );
 };
