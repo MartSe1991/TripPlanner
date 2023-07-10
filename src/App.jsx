@@ -13,14 +13,12 @@ function App() {
   console.log(travelData);
 
   return (
-    <FilterContext.Provider value={{ activeFilter: null }}>
+    <FilterContext.Provider
+      value={{ activeFilter: activeFilter, setActiveFilter: setActiveFilter }}
+    >
       <main className={classes.main}>
-        <Header
-          data={data}
-          activeFilter={activeFilter}
-          setActiveFilter={setActiveFilter}
-        />
-        <Body data={data} activeFilter={activeFilter} />
+        <Header data={data} />
+        <Body data={data} />
       </main>
     </FilterContext.Provider>
   );

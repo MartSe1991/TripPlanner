@@ -4,8 +4,8 @@ import dateToString from "../utils/dateToString";
 import Card from "../components/Card";
 import FilterContext from "../context/filter_status";
 
-const Body = (props) => {
-  const ctx = useContext(FilterContext);
+const Body = ({ data }) => {
+  const { activeFilter } = useContext(FilterContext);
   // data ha inizialmente questo formato:
 
   // data: [
@@ -20,7 +20,7 @@ const Body = (props) => {
   // Per ogni elemento, creiamo una proprietá all'interno dell'oggetto
   // dateGroups, la cui key é il valore del parametro date dell'elemento
   // corrente. Per ognuno, creiamo un array vuoto.
-  props.data.forEach((elem) => {
+  data.forEach((elem) => {
     if (!dateGroups[elem.date]) {
       // se non esiste una key all interno di dateGroups che sia uguale alla data dell-elem corrente
       dateGroups[elem.date] = []; // allora crea una chiave all-interno di dateGroups utilizzando il valore corrente
@@ -86,7 +86,7 @@ const Body = (props) => {
             <div className={classes.single_date}>{dateToString(elemDate)}</div>
             {eventData
               .filter((element) => {
-                return element.type === ctx.activeFilter || !ctx.activeFilter; //ritorna true se element.type é uguale ad activeFilter OPPURE se activeFilter é falsy
+                return element.type === activeFilter || !activeFilter; //ritorna true se element.type é uguale ad activeFilter OPPURE se activeFilter é falsy
               })
               .map((elem) => {
                 return (

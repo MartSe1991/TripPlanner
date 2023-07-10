@@ -8,8 +8,8 @@ import FilterButton from "./FilterButton";
 import classes from "./FilterButton.module.css";
 import FilterContext from "../context/filter_status";
 
-const Filter = (props) => {
-  const ctx = useContext(FilterContext);
+const Filter = () => {
+  const { activeFilter, setActiveFilter } = useContext(FilterContext);
   // activeFilter={activeFilter} filterHandler={setActiveFilter}
 
   // chiamiamo setFilter ogni volta che un filtro viene scelto.
@@ -25,7 +25,7 @@ const Filter = (props) => {
   // IN QUELL'ESATTO MOMENTO non sia giá uguale al valore del filtro che voglio settare.
   // Se lo é, il filtro attivo viene settato come null, altrimenti assume il valore che voglio settare.
   const setFilter = (type) => {
-    props.filterHandler(ctx.activeFilter === type ? null : type); // per disattivare il filtro
+    setActiveFilter(activeFilter === type ? null : type); // per disattivare il filtro
   };
 
   //mappa filterelements ad ogni iterazione renderizza struttura qui sotto - utilizzando type e content al posto dei valori specifici
@@ -60,7 +60,7 @@ const Filter = (props) => {
         return (
           <FilterButton
             key={`Filter-${key}`}
-            isActive={ctx.activeFilter === elem.type}
+            isActive={activeFilter === elem.type}
             clickHandler={() => {
               setFilter(elem.type);
             }}
