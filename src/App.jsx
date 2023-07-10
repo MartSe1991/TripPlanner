@@ -3,6 +3,7 @@ import classes from "./App.module.css";
 import travelData from "./assets/travel_data.json";
 import Header from "./containers/Header";
 import Body from "./containers/Body";
+import FilterContext from "./context/filter_status";
 
 const { data } = travelData;
 
@@ -12,14 +13,14 @@ function App() {
   console.log(travelData);
 
   return (
-    <main className={classes.main}>
-      <Header
-        data={data}
-        activeFilter={activeFilter}
-        setActiveFilter={setActiveFilter}
-      />
-      <Body data={data} />
-    </main>
+    <FilterContext.Provider
+      value={{ activeFilter: activeFilter, setActiveFilter: setActiveFilter }}
+    >
+      <main className={classes.main}>
+        <Header data={data} />
+        <Body data={data} />
+      </main>
+    </FilterContext.Provider>
   );
 }
 
