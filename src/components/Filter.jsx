@@ -10,7 +10,6 @@ import FilterContext from "../context/filter_status";
 
 const Filter = () => {
   const { activeFilter, setActiveFilter } = useContext(FilterContext);
-  // activeFilter={activeFilter} filterHandler={setActiveFilter}
 
   // chiamiamo setFilter ogni volta che un filtro viene scelto.
   // setFilter chiama il setter dello state definito in App.jsx che
