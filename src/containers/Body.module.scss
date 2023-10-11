@@ -1,0 +1,29 @@
+@import "../colors.scss";
+
+.dates {
+  display: flex;
+  padding: 0px 30px 30px;
+  section {
+    flex-grow: 1; // l'elemento prendere piú spazio possibile, se c'é
+    flex-shrink: 1; // l'elemento rimpicciolisce se necessario
+    flex-basis: 0; // dimensione minima
+    //Puó essere scritto come :
+    //flex: 1 1 0;
+    .single_date {
+      text-align: center;
+      font-weight: bold;
+      padding: 20px;
+      color: $accent;
+      font-size: 20px;
+      border: 1px solid rgba(0, 0, 0, 0.178);
+      background-color: $white;
+    }
+  }
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  padding: 15px 15px 0px;
+}

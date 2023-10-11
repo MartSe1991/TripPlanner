@@ -1,5 +1,5 @@
 import React from "react";
-import classes from "./Card.module.css";
+import classes from "./Card.module.scss";
 import dateToString from "../utils/dateToString";
 import Flight from "./icons/Flight";
 import Coach from "./icons/Coach";
@@ -42,7 +42,7 @@ const Card = (props) => {
           <div>{props.destination}</div>
         </div>
       </div>
-      <div>
+      <div className={classes.details}>
         {props.start_time && (
           <div>
             {props.category === "trip" && `Departs at ${props.start_time}`}

@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import classes from "./Body.module.css";
+import classes from "./Body.module.scss";
 import dateToString from "../utils/dateToString";
 import Card from "../components/Card";
 import FilterContext from "../context/filter_status";
@@ -84,25 +84,27 @@ const Body = ({ data }) => {
           // la key va messa all'elem piu esterno
           <section key={`group-${key}`}>
             <div className={classes.single_date}>{dateToString(elemDate)}</div>
-            {eventData
-              .filter((element) => {
-                return element.type === activeFilter || !activeFilter; //ritorna true se element.type é uguale ad activeFilter OPPURE se activeFilter é falsy
-              })
-              .map((elem) => {
-                return (
-                  <Card
-                    key={elem.id}
-                    category={elem.category}
-                    type={elem.type}
-                    where={elem.where}
-                    date={elem.date}
-                    start_time={elem.start_time}
-                    end_time={elem.end_time}
-                    notes={elem.notes}
-                    destination={elem.destination}
-                  />
-                );
-              })}
+            <div className={classes.cards}>
+              {eventData
+                .filter((element) => {
+                  return element.type === activeFilter || !activeFilter; //ritorna true se element.type é uguale ad activeFilter OPPURE se activeFilter é falsy
+                })
+                .map((elem) => {
+                  return (
+                    <Card
+                      key={elem.id}
+                      category={elem.category}
+                      type={elem.type}
+                      where={elem.where}
+                      date={elem.date}
+                      start_time={elem.start_time}
+                      end_time={elem.end_time}
+                      notes={elem.notes}
+                      destination={elem.destination}
+                    />
+                  );
+                })}
+            </div>
           </section>
         );
       })}
