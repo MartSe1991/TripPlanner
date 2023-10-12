@@ -5,7 +5,7 @@ import Coach from "./icons/Coach";
 import Stay from "./icons/Stay";
 import Event from "./icons/Event";
 import FilterButton from "./FilterButton";
-import classes from "./FilterButton.module.css";
+import classes from "./FilterButton.module.scss";
 import FilterContext from "../context/filter_status";
 
 const Filter = () => {

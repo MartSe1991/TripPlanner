@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import classes from "./App.module.css";
+import classes from "./App.module.scss";
 import travelData from "./assets/travel_data.json";
 import Header from "./containers/Header";
 import Body from "./containers/Body";

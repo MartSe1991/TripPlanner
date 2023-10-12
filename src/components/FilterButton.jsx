@@ -1,5 +1,5 @@
 import React from "react";
-import classes from "./FilterButton.module.css";
+import classes from "./FilterButton.module.scss";
 
 const FilterButton = ({ clickHandler, children, isActive }) => {
   return (
