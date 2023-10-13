@@ -1,7 +1,9 @@
 @import "../colors.scss";
+@import "../shared.scss";
 
 .dates {
   display: flex;
+  flex-direction: column;
   padding: 0px 30px 30px;
   section {
     flex-grow: 1; // l'elemento prendere piú spazio possibile, se c'é
@@ -19,11 +21,24 @@
       background-color: $white;
     }
   }
+
+  @media (min-width: $mobile_breakpoint) {
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  section {
+    .single_date {
+      margin-top: 20px;
+      border-radius: 10px;
+      width: auto;
+    }
+  }
 }
 
 .cards {
   display: flex;
   flex-direction: column;
   row-gap: 30px;
-  padding: 15px 15px 0px;
+  padding-top: 20px;
 }
