@@ -55,19 +55,21 @@ const Filter = () => {
   return (
     <div className={classes.icons}>
       <div>Filter:</div>
-      {filterElements.map((elem, key) => {
-        return (
-          <FilterButton
-            key={`Filter-${key}`}
-            isActive={activeFilter === elem.type}
-            clickHandler={() => {
-              setFilter(elem.type);
-            }}
-          >
-            {elem.content}
-          </FilterButton>
-        );
-      })}
+      <div className={classes.buttons}>
+        {filterElements.map((elem, key) => {
+          return (
+            <FilterButton
+              key={`Filter-${key}`}
+              isActive={activeFilter === elem.type}
+              clickHandler={() => {
+                setFilter(elem.type);
+              }}
+            >
+              {elem.content}
+            </FilterButton>
+          );
+        })}
+      </div>
     </div>
   );
 };

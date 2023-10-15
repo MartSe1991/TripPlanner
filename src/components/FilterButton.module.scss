@@ -1,10 +1,16 @@
 @import "../colors.scss";
+@import "../shared.scss";
 
 .icons {
   display: flex;
+  flex-direction: column;
   justify-content: flex-start;
   gap: 20px;
   margin-top: 30px;
+
+  @media (min-width: $mobile_breakpoint) {
+    flex-direction: row;
+  }
 }
 
 button {
@@ -29,4 +35,9 @@ button {
       fill: $lightGrey;
     }
   }
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
 }
