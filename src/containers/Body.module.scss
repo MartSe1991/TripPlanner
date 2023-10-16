@@ -4,7 +4,7 @@
 .dates {
   display: flex;
   flex-direction: column;
-  padding: 0px 30px 30px;
+  padding: 0px $spacing_medium $spacing_medium;
   section {
     flex-grow: 1; // l'elemento prendere piú spazio possibile, se c'é
     flex-shrink: 1; // l'elemento rimpicciolisce se necessario
@@ -14,9 +14,9 @@
     .single_date {
       text-align: center;
       font-weight: bold;
-      padding: 20px;
+      padding: $spacing_small;
       color: $accent;
-      font-size: 20px;
+      font-size: $font_large;
       border: 1px solid rgba(0, 0, 0, 0.178);
       background-color: $white;
     }
@@ -24,12 +24,12 @@
 
   @media (min-width: $mobile_breakpoint) {
     flex-direction: row;
-    gap: 20px;
+    gap: $spacing_small;
   }
 
   section {
     .single_date {
-      margin-top: 20px;
+      margin-top: $spacing_small;
       border-radius: 10px;
       width: auto;
     }
@@ -39,6 +39,6 @@
 .cards {
   display: flex;
   flex-direction: column;
-  row-gap: 20px;
-  padding-top: 20px;
+  row-gap: $spacing_small;
+  padding-top: $spacing_small;
 }

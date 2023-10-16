@@ -5,7 +5,7 @@ import Header from "./containers/Header";
 import Body from "./containers/Body";
 import FilterContext from "./context/filter_status";
 
-const { data } = travelData;
+const { main_destination, data } = travelData;
 
 function App() {
   const [activeFilter, setActiveFilter] = useState(null); // creo usestate per identificare stato corrente del filtro e per settarlo
@@ -17,7 +17,7 @@ function App() {
       value={{ activeFilter: activeFilter, setActiveFilter: setActiveFilter }}
     >
       <main className={classes.main}>
-        <Header data={data} />
+        <Header mainDestination={main_destination} data={data} />
         <Body data={data} />
       </main>
     </FilterContext.Provider>

@@ -1,8 +1,9 @@
 @import "../colors.scss";
+@import "../shared.scss";
 
 .header {
   height: 325px;
-  margin-bottom: 30px;
+  margin-bottom: $spacing_medium;
   color: $lightGrey;
   background-color: #000000;
   position: relative;
@@ -21,7 +22,7 @@
   }
 
   .content {
-    padding: 30px;
+    padding: $spacing_medium;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -33,7 +34,7 @@
   }
 
   h2 {
-    font-size: 14px;
+    font-size: $font_small;
     font-weight: 300;
     margin-top: 0;
     margin-bottom: 0;
@@ -41,11 +42,15 @@
 
   h1 {
     font-family: "openSansBold";
-    font-size: 60px;
+    font-size: $font_huge;
     margin-bottom: 0;
-    line-height: 60px;
+    line-height: $font_huge;
     margin-top: 0;
     margin-bottom: 0;
     color: $lightGrey;
+  }
+
+  p {
+    font-size: $font_medium;
   }
 }

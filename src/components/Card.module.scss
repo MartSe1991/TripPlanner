@@ -1,22 +1,24 @@
 @import "../colors.scss";
+@import "../shared.scss";
 
 .title {
   display: flex;
   justify-content: flex-start;
-  gap: 15px;
-  margin-bottom: 30px;
+  gap: $spacing_small;
+  margin-bottom: $spacing_small;
   font-weight: bold;
   color: $accent;
+  align-items: center;
 }
 
 .top_border {
   border-top-style: solid;
   border-color: $accent;
-  margin-top: 10px;
-  padding-top: 10px;
+  margin-top: $spacing_small;
+  padding-top: $spacing_small;
 }
 
 .details {
   font-weight: bold;
-  color: #00000098;
+  color: $text_color;
 }
