@@ -1,12 +1,14 @@
 @import "../colors.scss";
 @import "../shared.scss";
 
+$button_size: 40px;
+
 .icons {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  gap: 20px;
-  margin-top: 30px;
+  gap: $spacing_small;
+  margin-top: $spacing_medium;
 
   @media (min-width: $mobile_breakpoint) {
     flex-direction: row;
@@ -16,8 +18,8 @@
 button {
   border-radius: 20%;
   border: 1px solid $tertiary;
-  height: 40px;
-  width: 40px;
+  height: $button_size;
+  width: $button_size;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -39,5 +41,5 @@ button {
 
 .buttons {
   display: flex;
-  gap: 15px;
+  gap: $spacing_small;
 }

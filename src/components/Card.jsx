@@ -34,9 +34,9 @@ const Card = (props) => {
   return (
     <Container>
       <div className={classes.title}>
-        <icon>
+        <div>
           <Icon />
-        </icon>
+        </div>
         <div>
           <div>{props.where}</div>
           <div>{props.destination}</div>

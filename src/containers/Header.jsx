@@ -3,7 +3,7 @@ import Filter from "../components/Filter";
 import dateToString from "../utils/dateToString";
 import classes from "./Header.module.scss";
 
-const Header = ({ data }) => {
+const Header = ({ mainDestination, data }) => {
   // data={data}   activeFilter={activeFilter}   setActiveFilter={setActiveFilter}
   const outboundDate = new Date(data[0].date);
   const returnDate = new Date(data[data.length - 1].date);
@@ -14,7 +14,7 @@ const Header = ({ data }) => {
       <div className={classes.content}>
         <div>
           <h2>Trip To</h2>
-          <h1>SLOVAKIA</h1>
+          <h1>{mainDestination}</h1>
           <p>
             {/* const dateToString = (date) => { return `${day} ${month}`} */}
             {`From ${dateToString(outboundDate)} to ${dateToString(
